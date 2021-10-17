@@ -17,7 +17,7 @@
   <body>
     <div class="small reveal" id="exampleModal1" data-reveal>
       <h2>Ajouter une opération</h2>
-      <form action="#" id="operationForm">
+      <form action="#" id="operationForm" onsubmit="return false">
         <div>
           <label for="operator"><small>champ obligatoire</small></label>
           <select name="operator" id="operator" required>
@@ -50,7 +50,7 @@
           />
         </div>
         <div class="text-center">
-          <button type="submit" class="btSubmit">👊</button>
+          <button type="submit" class="btSubmit" id="submit">👊</button>
         </div>
       </form>
       <button
@@ -75,9 +75,9 @@
           <div class="cell">
             <div>
               <nav class="navHeader">
-                <a href="#" class="active">Tout</a>
-                <a href="#">Crédit</a>
-                <a href="#">Débit</a>
+                <a href="#" class="active" id="bTout">Tout</a>
+                <a href="#" id="bCredit">Crédit</a>
+                <a href="#" id="bDebit">Débit</a>
               </nav>
             </div>
           </div>
@@ -85,7 +85,7 @@
       </div>
     </header>
     <main>
-      <div class="grid-container">
+      <div class="grid-container" id="Affichage_bas"> <!--Affichage du bas-->
         <!-- operation -->
         <div class="operation credit">
           <div class="grid-x grid-padding-x align-middle">
