@@ -17,7 +17,7 @@
   <body>
     <div class="small reveal" id="exampleModal1" data-reveal>
       <h2>Ajouter une opération</h2>
-      <form action="#" id="operationForm" onsubmit="return false">
+      <form action="#" id="operationForm">
         <div>
           <label for="operator"><small>champ obligatoire</small></label>
           <select name="operator" id="operator" required>
@@ -50,7 +50,7 @@
           />
         </div>
         <div class="text-center">
-          <button type="submit" class="btSubmit" id="submit">👊</button>
+          <button type="submit" class="btSubmit" id="submit" >👊</button>
         </div>
       </form>
       <button
@@ -58,6 +58,7 @@
         data-close
         aria-label="Close modal"
         type="button"
+        id="quitter"
       >
         <span aria-hidden="true">&times;</span>
       </button>
@@ -67,7 +68,7 @@
         <div class="grid-x">
           <div class="cell">
             <div class="text-center">
-              <h1 id="solde" class="solde">2 560.00€</h1>
+              <h1 id="solde" class="solde" >2560</h1>
               <small class="good">on est bien 😃</small>
               <canvas id="myChart" width="400" height="100"></canvas>
             </div>
@@ -102,13 +103,13 @@
             </div>
             <div class="cell small-3 text-right">
               <div>
-                <p class="count">1 200€</p>
+                <p class="count">1 200</p>
                 <small>100%</small>
               </div>
             </div>
           </div>
         </div>
-        <!-- operation -->
+        <!-- operation 
         <div class="operation debit">
           <div class="grid-x grid-padding-x align-middle">
             <div class="cell shrink">
@@ -129,8 +130,8 @@
               </div>
             </div>
           </div>
-        </div>
-        <!-- operation -->
+        </div>-->
+        <!-- operation 
         <div class="operation credit">
           <div class="grid-x grid-padding-x align-middle">
             <div class="cell shrink">
@@ -151,8 +152,8 @@
               </div>
             </div>
           </div>
-        </div>
-        <!-- operation -->
+        </div>-->
+        <!-- operation 
         <div class="operation debit">
           <div class="grid-x grid-padding-x align-middle">
             <div class="cell shrink">
@@ -173,8 +174,8 @@
               </div>
             </div>
           </div>
-        </div>
-        <!-- operation -->
+        </div>-->
+        <!-- operation 
         <div class="operation credit">
           <div class="grid-x grid-padding-x align-middle">
             <div class="cell shrink">
@@ -196,7 +197,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> --> 
     </main>
     <div class="add">
       <button class="button" data-open="exampleModal1">+</button>

@@ -6,6 +6,8 @@ $(document).ready(function () {
   $(document).foundation();
 });
 
+let solde = document.querySelector("#solde").innerHTML
+
 const bCredit = document.querySelector("#bCredit");
 
 bCredit.addEventListener("click", function(){
@@ -94,7 +96,20 @@ affichageBas.innerHTML= affichageBas.innerHTML+`<div class="operation ${operator
 </div>
 </div>`
 
+let form = document.querySelector("#operationForm")
+form.reset();
 
+if (operator == "credit"){
+solde = parseFloat(solde) + parseFloat(montant);
+console.log(solde);
+document.querySelector("#solde").innerHTML= solde
+}
+else {
+  solde = parseFloat(solde) - parseFloat(montant);
+console.log(solde);
+document.querySelector("#solde").innerHTML= solde
+}
 
+return false;
 })
 
