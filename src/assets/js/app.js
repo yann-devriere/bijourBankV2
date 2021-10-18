@@ -89,7 +89,7 @@ affichageBas.innerHTML= affichageBas.innerHTML+`<div class="operation ${operator
   </div>
   <div class="cell small-3 text-right">
     <div>
-      <p class="count">${montant}</p>
+      <p class="count">${montant}€</p>
       <small>100%</small>
     </div>
   </div>
@@ -102,12 +102,12 @@ form.reset();
 if (operator == "credit"){
 solde = parseFloat(solde) + parseFloat(montant);
 console.log(solde);
-document.querySelector("#solde").innerHTML= solde
+document.querySelector("#solde").innerHTML= solde+"€"
 }
 else {
   solde = parseFloat(solde) - parseFloat(montant);
 console.log(solde);
-document.querySelector("#solde").innerHTML= solde
+document.querySelector("#solde").innerHTML= solde+"€"
 }
 
 return false;
