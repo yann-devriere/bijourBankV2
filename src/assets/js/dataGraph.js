@@ -1,10 +1,19 @@
 // <block:setup:1>
-const datapoints = [1200, 750, 775, 760, 2560];
-const DATA_COUNT = datapoints.length + 2;
-const labels = [];
+// Valeur des poitns du graph en dur
+let datapoints = [1200, 750, 775];
+let datapointsLS = JSON.parse(localStorage.getItem("tableauMontants"));
+//verification de l'état du localStorage et redéfinition de datapoints
+if (localStorage.getItem("valeurSuivante") !== null){
+    datapoints = datapointsLS}
+
+//definition de la largeur initiale du graphique
+let DATA_COUNT = datapoints.length + 2;
+let labels = [];
 for (let i = 0; i < DATA_COUNT; ++i) {
   labels.push(i.toString());
 }
+
+
 const data = {
   labels: labels,
   datasets: [
@@ -12,7 +21,7 @@ const data = {
       label: "Compte",
       data: datapoints,
       borderColor: "purple",
-      //   fill: true,
+        // fill: true,
       cubicInterpolationMode: "monotone",
     },
   ],
@@ -72,3 +81,15 @@ function addTemperature(time, temperature) {
   /* Rafraichir le graphique */
   chart.update();
 }
+
+//mise a jour du graphique et ajout au dataoints de chaque nouveau solde au submit
+function updateGraph (){
+  datapoints.push(parseFloat(localStorage.getItem("valeurSuivante")));
+  chart.update();
+  localStorage.setItem("tableauMontants", JSON.stringify(datapoints));
+
+   DATA_COUNT = datapoints.length + 2;
+   labels.push(DATA_COUNT.toString);
+}
+
+
